@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Game {
+  display: grid;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(50, 10px);
+  grid-template-rows: repeat(50, 10px);
+  margin: 20px auto;
+  gap: 1px;
+}
+
+.cell {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #ddd;
+}
+
+.cell.alive {
+  background-color: black;
+}
+
+.cell.dead {
+  background-color: white;
+}
+
+.controls {
+  margin: 20px;
+}
+
+.button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
